@@ -1,19 +1,5 @@
 package optimage
 
-import (
-	"bytes"
-	"encoding/json"
-	"fmt"
-	"html"
-	"html/template"
-	"log"
-	"net/url"
-	"strconv"
-
-	"github.com/ponzu-cms/ponzu/system/addon"
-	"github.com/ponzu-cms/ponzu/system/db"
-)
-
 // File returns the []byte of a <input type="file"> HTML element with a label.
 // IMPORTANT:
 // The `fieldName` argument will cause a panic if it is not exactly the string
