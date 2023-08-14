@@ -1,7 +1,7 @@
 package optimage
 
 import (
-	"github.com/ponzu-cms/ponzu/management/values"
+	"github.com/ponzu-cms/ponzu/management/editor"
 )
 
 // File returns the []byte of a <input type="file"> HTML element with a label.
@@ -9,8 +9,8 @@ import (
 // The `fieldName` argument will cause a panic if it is not exactly the string
 // form of the struct field that this editor input is representing
 func ImageFile(fieldName string, p interface{}, attrs map[string]string) []byte {
-	name := values.TagNameFromStructField(fieldName, p)
-	value := values.ValueFromStructField(fieldName, p)
+	name := editor.TagNameFromStructField(fieldName, p)
+	value := editor.ValueFromStructField(fieldName, p)
 	tmpl :=
 		`<div class="file-input ` + name + ` input-field col s12">
 			<label class="active">` + attrs["label"] + `</label>
