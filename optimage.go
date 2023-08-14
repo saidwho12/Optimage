@@ -310,7 +310,7 @@ func ImageRepeater(fieldName string, p interface{}, attrs map[string]string) []b
 	}
 
 	tmpl :=
-		`<div class="file-input %[5]s %[4]s input-field col s12">
+		`<div class="file-input %[5]s %[4]s input-field col s3">
 			%[2]s
 			<div class="file-field input-field">
 				<div class="btn">
